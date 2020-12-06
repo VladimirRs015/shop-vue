@@ -2,7 +2,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import UserDashBoard from "@/views/DashBoard.vue";
 //Modules 
 import authRoutes from './public_routes/sessionsRoutes'
 Vue.use(VueRouter)
@@ -15,11 +15,17 @@ Vue.use(VueRouter)
 
   },
   {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: UserDashBoard,
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
   },
   ...authRoutes,
+
   
 ]
 const router = new VueRouter({

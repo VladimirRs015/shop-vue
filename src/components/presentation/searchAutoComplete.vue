@@ -1,11 +1,7 @@
 <template>
-  <section>
-    <h1
-      class="title is-3 has-text-white has-text-centered"
-    >!Busca informacion mas rapido!</h1>
     <b-autocomplete
       :data="data"
-      placeholder="e.j. Examenes"
+      placeholder="Busca un producto"
       field="title"
       :loading="isFetching"
       @typing="getAsyncData"
@@ -28,7 +24,6 @@
         </div>
       </template>
     </b-autocomplete>
-  </section>
 </template>
 
 <script>
@@ -70,3 +65,15 @@ export default {
   }
 };
 </script>
+<style >
+.autocomplete{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:80%
+}
+.control{
+  width:80%
+}
+
+</style>

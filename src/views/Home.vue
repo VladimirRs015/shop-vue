@@ -2,7 +2,7 @@
   <div class="home">
     <heroBanner/>
     <sampleTeachers/>
-    <academicOfferList/>
+
   </div>
 </template>
 
@@ -10,14 +10,14 @@
 // @ is an alias to /src
 import heroBanner from '@/components/layout/hero_banner'
 import sampleTeachers from '@/components/presentation/some_teachers'
-import academicOfferList from '@/components/layout/academic_offer_list'
+// import academicOfferList from '@/components/layout/academic_offer_list'
 
 export default {
   name: 'Home',
   components: {
     heroBanner,
     sampleTeachers,
-    academicOfferList
+    // academicOfferList
   },
   methods:{
     getData(){

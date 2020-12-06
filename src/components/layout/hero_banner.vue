@@ -1,33 +1,32 @@
 <template>
-  <section class="hero is-medium is-midnight">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-multiline is-tablet">
-          <div class="container">
-            <div class="column is-12">
-              <SearchAutoComplete />
-            </div>
-          </div>
-          <div class="column is-12">
-            <h1 class="title is-1 has-text-white">Large title</h1>
-            <h2
-              class="subtitle has-text-white"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut obcaecati modi velit sint doloremque iusto, debitis fuga corporis maxime excepturi. Ad minus quibusdam provident deserunt odit cumque, atque placeat reiciendis!</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <b-carousel>
+        <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
+            <section :class="`hero is-large is-${carousel.color}`">
+                <div class="hero-body has-text-centered">
+                    <h1 class="title">{{carousel.text}}</h1>
+                </div>
+            </section>
+        </b-carousel-item>
+    </b-carousel>
 </template>
-
 <script>
-import SearchAutoComplete from "@/components/presentation/searchAutoComplete";
 export default {
   name: "HeroBanner",
+    data(){
+        return {
+            carousels: [
+                { text: 'Slide 1', color: 'primary' },
+                { text: 'Slide 2', color: 'info' },
+                { text: 'Slide 3', color: 'success' },
+                { text: 'Slide 4', color: 'warning' },
+                { text: 'Slide 5', color: 'danger' }
+            ]
+        }
+    },
   components: {
-    SearchAutoComplete
+  
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

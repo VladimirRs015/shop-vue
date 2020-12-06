@@ -28,7 +28,9 @@ export default {
 <style lang="scss">
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
-
+#app {
+  min-height: 100vh;
+}
 // Set your colors
 // Float 
 // $flat1 : #34495e ; 
@@ -94,5 +96,6 @@ $link-focus-border: $primary;
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+
 
 </style>

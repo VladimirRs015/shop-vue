@@ -1,9 +1,9 @@
 <template>
   <div id="footer">
     <footer class="columns">
-      <div class="column hero is-centered is-midnight is-medium">
+      <div class="column  is-midnight is-medium">
         <div class="hero-body">
-          <p class="subtitle is-4 has-text-centered">Direccion : Los Alcarrizos, Barrio La Unión</p>
+          <p class="subtitle is-4 has-text-centered">Todos los derechos reservados</p>
         </div>
       </div>
     </footer>
@@ -12,12 +12,13 @@
 
 <style lang="scss" scoped>
 #footer {
-  margin-top: 20rem;
+  position : relative;
+  bottom:0;
 }
-@media screen and(max-width: 768px) {
-  .hero {
-    padding-top: 9rem !important;
-    padding-bottom: 9rem !important;
-  }
-}
+// @media screen and(max-width: 768px) {
+//   .hero {
+//     padding-top: 9rem !important;
+//     padding-bottom: 9rem !important;
+//   }
+// }
 </style>
